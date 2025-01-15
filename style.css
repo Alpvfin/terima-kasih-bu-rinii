@@ -28,29 +28,26 @@ section {
   margin-bottom: 30px;
 }
 
+/* Styling Galeri Foto */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom responsif */
+  gap: 15px; /* Jarak antar foto */
+  justify-items: center; /* Memusatkan gambar di dalam grid */
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  width: 100%; /* Foto mengikuti ukuran kolom */
+  max-width: 200px; /* Ukuran maksimal foto */
+  height: auto; /* Menjaga rasio foto */
+  border-radius: 10px; /* Sudut membulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan foto */
+  transition: transform 0.3s ease-in-out; /* Animasi saat hover */
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Zoom saat hover */
 }
-
-iframe {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
 /* Floating Hearts Animation */
 .heart-container {
   position: fixed;
